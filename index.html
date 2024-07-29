@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript" src="./src/tailwind-config.js"></script>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="./src/assets/css/style.css">
+</head>
+
+<body class="bg-background text-foreground">
+    <div class="min-h-screen">
+        <nav class="bg-background text-primary-foreground shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="text-2xl font-extrabold">MRstudio</div>
+                <div class="hidden md:flex space-x-6">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="hover:text-accent">Home</a></li>
+                        <li><a href="#" class="hover:text-accent">About</a></li>
+                        <li><a href="#" class="hover:text-accent">Type of house</a></li>
+                        <li><a href="#" class="hover:text-accent">Contact</a></li>
+                    </ul>
+                </div>
+                <button
+                    class="bg-accent text-accent-foreground px-4 py-2 rounded-full shadow-lg hidden md:block">Login</button>
+                <button class="md:hidden flex items-center" id="navbar-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:hidden" id="navbar-menu">
+                <ul class="flex flex-col align space-y-4 px-4 py-2 ">
+                    <li><a href="#" class="hover:text-accent">Home</a></li>
+                    <li><a href="#" class="hover:text-accent">About</a></li>
+                    <li><a href="#" class="hover:text-accent">Type of house</a></li>
+                    <li><a href="#" class="hover:text-accent">Contact</a></li>
+                    <li><button
+                            class="bg-accent text-accent-foreground px-4 py-2 rounded-full shadow-lg w-full">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="container mx-auto px-4 py-12">
+            <!--             text-card-foreground -->
+            <div class=" text-card-foreground rounded-3xl p-8 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2">
+                    <h1 class="text-5xl font-extrabold mb-4 text-white">Enjoy Your Dream Vacation</h1>
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend,
+                        libero vel malesuada.</p>
+                    <p class="text-muted">Warwick Hotels & Resorts</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/1586663/pexels-photo-1586663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Vacation Resort" class="rounded-3xl shadow-lg" />
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-4 py-8">
+            <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-6">
+                <div class="flex items-center justify-between flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
+                    <div
+                    class="flex items-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
+                    <button
+                        class="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full sm:w-auto">
+                        Facilities
+                    </button>
+                    <button
+                        class="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full sm:w-auto">
+                        Hotels For You
+                    </button>
+                    <button
+                        class="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full sm:w-auto">
+                        50 Results
+                    </button>
+                </div>
+                <!-- Search Section -->
+                <div
+                    class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
+                    <input type="text" placeholder="Search"
+                        class="border border-gray-300 rounded-full px-4 py-2 shadow-inner w-full sm:w-auto focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out" />
+                    <button
+                        class="bg-green-600 text-white px-4 py-2 rounded-full shadow-lg w-full sm:w-auto transition duration-300 ease-in-out hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                        Search
+                    </button>
+                </div>
+                </div>
+
+                <div
+                    class="flex items-center justify-center sm:justify-center space-x-0 sm:space-x-4 space-y-4 sm:space-y-0">
+                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Facility 1"
+                        class="rounded-full shadow-md m-2 transition duration-300 images-card ease-in-out hover:shadow-xl" />
+                    <img src="https://images.pexels.com/photos/3307616/pexels-photo-3307616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Facility 2"
+                        class="rounded-full shadow-md m-2 transition duration-300 images-card ease-in-out hover:shadow-xl" />
+                    <img src="https://images.pexels.com/photos/6245751/pexels-photo-6245751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Facility 3"
+                        class="rounded-full shadow-md m-2 transition duration-300 images-card ease-in-out hover:shadow-xl" />
+                    <img src="https://images.pexels.com/photos/3760917/pexels-photo-3760917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Facility 4"
+                        class="rounded-full shadow-md m-2 transition duration-300 images-card ease-in-out hover:shadow-xl" />
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="text-4xl font-extrabold text-center mb-8">Entire city of choice</h2>
+            <p class="text-muted text-center mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+                faucibus erat.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/1756756/pexels-photo-1756756.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 1" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/772668/pexels-photo-772668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 2" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/73756/fog-mist-golden-sunrise-73756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 3" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/1157386/pexels-photo-1157386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 2" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/7276651/pexels-photo-7276651.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="City 3" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/7276635/pexels-photo-7276635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 2" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/7276587/pexels-photo-7276587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 3" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/17751278/pexels-photo-17751278/free-photo-of-woman-standing-on-a-bridge-with-a-view-of-the-mountain.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 2" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/14023491/pexels-photo-14023491.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        alt="City 3" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/19511999/pexels-photo-19511999/free-photo-of-woman-in-hat-standing-by-lake-and-green-hills.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 2" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/5098286/pexels-photo-5098286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 3" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/8231139/pexels-photo-8231139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 2" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/18353736/pexels-photo-18353736/free-photo-of-couple-camping-in-camper.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        alt="City 3" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/7967408/pexels-photo-7967408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 2" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+                <div class="bg-card text-card-foreground shadow-2xl rounded-3xl p-4">
+                    <img src="https://images.pexels.com/photos/9354747/pexels-photo-9354747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="City 3" class="rounded-3xl mb-4 shadow-md" />
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-extrabold">$800.00</span>
+                        <button
+                            class="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">Booking</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="text-primary-foreground py-6 mt-12">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 MRstudio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./src/assets/js/script.js"></script>
+</body>
+
+</html>
